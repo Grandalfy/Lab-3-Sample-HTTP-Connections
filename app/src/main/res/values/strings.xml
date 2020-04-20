@@ -3,9 +3,11 @@
 
     <string name="title_hello">Hello World</string>
     <string name="title_params">Parameters</string>
+    <string name="title_wait">Wait!</string>
 
     <string name="text_response_label">Response from Web Service: </string>
     <string name="action_get">GET</string>
     <string name="action_post">POST</string>
     <string name="hint_message">Enter your name</string>
+
 </resources>

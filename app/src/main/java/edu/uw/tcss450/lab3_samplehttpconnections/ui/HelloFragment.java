@@ -14,15 +14,19 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import edu.uw.tcss450.lab3_samplehttpconnections.R;
+import edu.uw.tcss450.lab3_samplehttpconnections.databinding.HelloFragmentBinding;
 
 public class HelloFragment extends Fragment {
 
     private HelloViewModel mViewModel;
 
+    private HelloFragmentBinding binding;
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.hello_fragment, container, false);
+        binding = HelloFragmentBinding.inflate(inflater);
+        return binding.getRoot();
     }
 
     @Override

@@ -15,4 +15,9 @@
         android:name="edu.uw.tcss450.lab3_samplehttpconnections.ui.ParamsFragment"
         android:label="@string/title_params"
         tools:layout="@layout/params_fragment" />
+    <fragment
+        android:id="@+id/navigation_wait"
+        android:name="edu.uw.tcss450.lab3_samplehttpconnections.ui.WaitFragment"
+        android:label="@string/title_wait"
+        tools:layout="@layout/wait_fragment" />
 </navigation>

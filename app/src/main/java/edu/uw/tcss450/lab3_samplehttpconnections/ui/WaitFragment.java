@@ -14,16 +14,19 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import edu.uw.tcss450.lab3_samplehttpconnections.R;
+import edu.uw.tcss450.lab3_samplehttpconnections.databinding.WaitFragmentBinding;
 
 public class WaitFragment extends Fragment {
 
     private WaitViewModel mViewModel;
 
+    private WaitFragmentBinding binding;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.wait_fragment, container, false);
+        binding = WaitFragmentBinding.inflate(inflater);
+        return binding.getRoot();
     }
 
     @Override

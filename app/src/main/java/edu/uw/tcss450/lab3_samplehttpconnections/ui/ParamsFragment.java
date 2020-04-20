@@ -14,15 +14,19 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import edu.uw.tcss450.lab3_samplehttpconnections.R;
+import edu.uw.tcss450.lab3_samplehttpconnections.databinding.ParamsFragmentBinding;
 
 public class ParamsFragment extends Fragment {
+
+    private ParamsFragmentBinding binding;
 
     private ParamsViewModel mViewModel;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.params_fragment, container, false);
+        binding = ParamsFragmentBinding.inflate(inflater);
+        return binding.getRoot();
     }
 
     @Override
