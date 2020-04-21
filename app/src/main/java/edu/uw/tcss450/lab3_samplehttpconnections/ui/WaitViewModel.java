@@ -1,7 +1,13 @@
 package edu.uw.tcss450.lab3_samplehttpconnections.ui;
 
-import androidx.lifecycle.ViewModel;
+import android.app.Application;
 
-public class WaitViewModel extends ViewModel {
+import androidx.annotation.NonNull;
+import androidx.lifecycle.AndroidViewModel;
 
+public class WaitViewModel extends AndroidViewModel {
+
+    public WaitViewModel(@NonNull Application application) {
+        super(application);
+    }
 }

@@ -9,5 +9,7 @@
     <string name="action_get">GET</string>
     <string name="action_post">POST</string>
     <string name="hint_message">Enter your name</string>
+    <string name="action_async">Asynchronous</string>
+    <string name="action_sync">Synchronous</string>
 
 </resources>

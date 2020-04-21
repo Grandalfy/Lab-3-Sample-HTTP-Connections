@@ -1,7 +1,13 @@
 package edu.uw.tcss450.lab3_samplehttpconnections.ui;
 
-import androidx.lifecycle.ViewModel;
+import android.app.Application;
 
-public class HelloViewModel extends ViewModel {
+import androidx.annotation.NonNull;
+import androidx.lifecycle.AndroidViewModel;
 
+public class HelloViewModel extends AndroidViewModel {
+
+    public HelloViewModel(@NonNull Application application) {
+        super(application);
+    }
 }
