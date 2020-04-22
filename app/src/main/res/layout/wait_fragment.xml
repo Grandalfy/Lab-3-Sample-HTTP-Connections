@@ -30,12 +30,11 @@
         app:layout_constraintTop_toBottomOf="@+id/text_label" />
 
     <Button
-        android:id="@+id/button_sync"
+        android:id="@+id/button_get"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/action_sync"
-        app:layout_constraintEnd_toStartOf="@+id/button_async"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:text="@string/action_get"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
 
@@ -45,26 +44,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.5" />
-
-    <Button
-        android:id="@+id/button_async"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/action_async"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button_sync"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
-
-    <ImageButton
-        android:id="@+id/button_clear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:src="@drawable/ic_clear_black_24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_async" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout_wait"
