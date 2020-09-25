@@ -1,4 +1,4 @@
-package edu.uw.tcss450.lab3_samplehttpconnections.ui;
+package edu.uw.tcss450.lab3_samplehttpconnections.ui.params;
 
 import android.app.Application;
 

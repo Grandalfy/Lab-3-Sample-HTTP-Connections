@@ -1,7 +1,6 @@
-package edu.uw.tcss450.lab3_samplehttpconnections.ui;
+package edu.uw.tcss450.lab3_samplehttpconnections.ui.hello;
 
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
 
 import android.os.Bundle;
 
@@ -13,25 +12,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import edu.uw.tcss450.lab3_samplehttpconnections.R;
-import edu.uw.tcss450.lab3_samplehttpconnections.databinding.WaitFragmentBinding;
+import edu.uw.tcss450.lab3_samplehttpconnections.databinding.HelloFragmentBinding;
 
-public class WaitFragment extends Fragment {
+public class HelloFragment extends Fragment {
 
-    private WaitViewModel mViewModel;
+    private HelloViewModel mViewModel;
 
-    private WaitFragmentBinding binding;
+    private HelloFragmentBinding binding;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mViewModel = new ViewModelProvider(getActivity()).get(WaitViewModel.class);
+        mViewModel = new ViewModelProvider(getActivity()).get(HelloViewModel.class);
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        binding = WaitFragmentBinding.inflate(inflater);
+        binding = HelloFragmentBinding.inflate(inflater);
         return binding.getRoot();
     }
 

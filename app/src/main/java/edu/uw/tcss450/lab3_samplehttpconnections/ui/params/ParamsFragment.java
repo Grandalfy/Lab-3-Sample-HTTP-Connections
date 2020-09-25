@@ -1,7 +1,6 @@
-package edu.uw.tcss450.lab3_samplehttpconnections.ui;
+package edu.uw.tcss450.lab3_samplehttpconnections.ui.params;
 
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
 
 import android.os.Bundle;
 
@@ -13,25 +12,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import edu.uw.tcss450.lab3_samplehttpconnections.R;
-import edu.uw.tcss450.lab3_samplehttpconnections.databinding.HelloFragmentBinding;
+import edu.uw.tcss450.lab3_samplehttpconnections.databinding.ParamsFragmentBinding;
 
-public class HelloFragment extends Fragment {
+public class ParamsFragment extends Fragment {
 
-    private HelloViewModel mViewModel;
+    private ParamsFragmentBinding binding;
 
-    private HelloFragmentBinding binding;
+    private ParamsViewModel mViewModel;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mViewModel = new ViewModelProvider(getActivity()).get(HelloViewModel.class);
+        mViewModel = new ViewModelProvider(getActivity()).get(ParamsViewModel.class);
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        binding = HelloFragmentBinding.inflate(inflater);
+        binding = ParamsFragmentBinding.inflate(inflater);
         return binding.getRoot();
     }
 
