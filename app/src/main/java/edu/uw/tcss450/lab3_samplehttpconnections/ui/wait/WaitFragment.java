@@ -33,4 +33,14 @@ public class WaitFragment extends Fragment {
         return binding.getRoot();
     }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        mViewModel.addResponseObserver(getViewLifecycleOwner(), result ->
+                binding.textResponseOutput.setText(result.toString()));
+
+        binding.buttonGet.setOnClickListener(button -> mViewModel.connectGet());
+    }
+
 }
