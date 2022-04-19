@@ -37,10 +37,15 @@ public class WaitFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        mViewModel.addResponseObserver(getViewLifecycleOwner(), result ->
-                binding.textResponseOutput.setText(result.toString()));
+        mViewModel.addResponseObserver(getViewLifecycleOwner(), result -> {
+            binding.textResponseOutput.setText(result.toString());
+            binding.layoutWait.setVisibility(View.GONE);
+        });
 
-        binding.buttonGet.setOnClickListener(button -> mViewModel.connectGet());
+        binding.buttonGet.setOnClickListener(button -> {
+            mViewModel.connectGet();
+            binding.layoutWait.setVisibility(View.VISIBLE);
+        });
     }
 
 }
