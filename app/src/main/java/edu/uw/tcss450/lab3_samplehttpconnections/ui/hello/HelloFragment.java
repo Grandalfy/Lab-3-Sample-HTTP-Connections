@@ -41,6 +41,8 @@ public class HelloFragment extends Fragment {
                 binding.textResponseOutput.setText(result.toString()));
 
         binding.buttonGet.setOnClickListener(button -> mViewModel.connectGet());
+
+        binding.buttonPost.setOnClickListener(button -> mViewModel.connectPost());
     }
 
 }
