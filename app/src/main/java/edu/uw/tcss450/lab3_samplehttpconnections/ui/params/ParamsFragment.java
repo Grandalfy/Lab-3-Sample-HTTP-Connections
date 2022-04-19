@@ -33,4 +33,18 @@ public class ParamsFragment extends Fragment {
         return binding.getRoot();
     }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        mViewModel.addResponseObserver(getViewLifecycleOwner(), response ->
+                binding.textResponseOutput.setText(response.toString()));
+
+        binding.buttonGet.setOnClickListener(button ->
+                mViewModel.connectGet(binding.editMessage.getText().toString()));
+
+        binding.buttonPost.setOnClickListener(button ->
+                mViewModel.connectPost(binding.editMessage.getText().toString()));
+    }
+
 }
